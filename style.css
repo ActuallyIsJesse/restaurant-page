@@ -12,12 +12,16 @@ nav {
     border: 1px solid #eaeaea;
     border-bottom: none;
     border-radius: .25rem .25rem 0rem 0rem;
-    background-color: #f9f9f9;
+    background-color: #d5deed;
 
 }
 
 .nav-item > a {
     text-decoration: none;
+    color: #868a90;
+}
+
+.active-nav > a {
     color: #404040;
 }
 
