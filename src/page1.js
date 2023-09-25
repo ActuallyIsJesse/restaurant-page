@@ -13,6 +13,7 @@ const buildPageOne = (container) => {
     
     navLinks.forEach((element, i) => {
         element.setAttribute("href", "#");
+        element.setAttribute("data-index", i + 1)
         element.textContent = `Page ${i + 1}`
     })
 
@@ -40,8 +41,7 @@ const buildPageOne = (container) => {
     const firstPageImage = document.createElement("img");
     firstPageImage.setAttribute("src", "./subs.jpeg")
     contentArea.append(firstPageH1, firstPageImage);
-
-
+    
 }
 
 export { buildPageOne };
