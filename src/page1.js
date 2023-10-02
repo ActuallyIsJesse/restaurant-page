@@ -1,3 +1,4 @@
+import image1 from './subs.jpeg';
 const buildPageOne = (container) => {
     
     //Build Nav bar
@@ -20,6 +21,7 @@ const buildPageOne = (container) => {
 
     navButtons.forEach((element, i) => {
         element.classList.add("nav-item")
+        element.setAttribute("data-index", i + 1)
         element.append(navLinks[i]);
         navArea.append(element)
     });
@@ -39,8 +41,8 @@ const buildPageOne = (container) => {
     firstPageP.textContent = `Here at Billy's Delicious Subs, we pride our selves on making delicious subs. If you haven't
     had one yet, try it—it's delicious!`;
     const firstPageImage = document.createElement("img");
-    firstPageImage.setAttribute("src", "./subs.jpeg")
-    contentArea.append(firstPageH1, firstPageImage);
+    firstPageImage.setAttribute("src", image1)
+    contentArea.append(firstPageH1, firstPageP, firstPageImage);
     
 }
 
