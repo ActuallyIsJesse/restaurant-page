@@ -15,7 +15,6 @@ const buildPageOne = (container) => {
     navLinks.forEach((element, i) => {
         element.setAttribute("href", "#");
         element.setAttribute("data-index", i + 1)
-        element.textContent = `Page ${i + 1}`
     })
 
 
@@ -34,15 +33,21 @@ const buildPageOne = (container) => {
     container.append(navArea, contentArea);
 
     // Populate content area
+    navLinks[0].textContent = "Home"
+    navLinks[1].textContent = "Menu"
+    navLinks[2].textContent = "Contact"
     const firstPageH1 = document.createElement("h1");
     firstPageH1.textContent = "Billy's Delicious Subs";
     const firstPageP = document.createElement("p");
+    const firstPageP2 = document.createElement("p");
     firstPageP.classList.add("card");
-    firstPageP.textContent = `Here at Billy's Delicious Subs, we pride our selves on making delicious subs. If you haven't
-    had one yet, try it—it's delicious!`;
+    firstPageP2.classList.add("card");
+    firstPageP.textContent = `At Billy's Delicious Subs, we're not just about making great sandwiches. We're about making sandwiches that are so good, you'll want to hug them. That's right, hug them. We're talking about subs that are so stacked with fresh, delicious ingredients, you'll need two hands to hold them. And subs that are so flavorful, you'll be savoring every bite long after you're finished eating.`
+    firstPageP2.textContent = `So what are you waiting for? Come on down to Billy's Delicious Subs today and experience the subs that are so good, you'll want to hug them!
+    P.S. We don't actually recommend hugging our subs. They're hot and squishy, and it could get messy. But we understand if you can't resist.`;
     const firstPageImage = document.createElement("img");
     firstPageImage.setAttribute("src", image1)
-    contentArea.append(firstPageH1, firstPageP, firstPageImage);
+    contentArea.append(firstPageH1, firstPageP, firstPageP2, firstPageImage);
     
 }
 

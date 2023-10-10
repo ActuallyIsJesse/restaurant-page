@@ -17,7 +17,6 @@ const buildPageThree = (container) => {
     navLinks.forEach((element, i) => {
         element.setAttribute("href", "#");
         element.setAttribute("data-index", i + 1)
-        element.textContent = `Page ${i + 1}`
     })
 
 
@@ -36,6 +35,9 @@ const buildPageThree = (container) => {
     container.append(navArea, contentArea);
 
     // Populate content area
+    navLinks[0].textContent = "Home"
+    navLinks[1].textContent = "Menu"
+    navLinks[2].textContent = "Contact"
     const firstPageH1 = document.createElement("h1");
     firstPageH1.textContent = "Contact us";
     const firstPageP = document.createElement("p");

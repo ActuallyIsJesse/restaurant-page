@@ -16,7 +16,6 @@ const buildPageTwo = (container) => {
     navLinks.forEach((element, i) => {
         element.setAttribute("href", "#");
         element.setAttribute("data-index", i + 1)
-        element.textContent = `Page ${i + 1}`
     })
 
 
@@ -35,14 +34,19 @@ const buildPageTwo = (container) => {
     container.append(navArea, contentArea);
 
     // Populate content area
+    navLinks[0].textContent = "Home"
+    navLinks[1].textContent = "Menu"
+    navLinks[2].textContent = "Contact"
     const firstPageH1 = document.createElement("h1");
     firstPageH1.textContent = "Menu";
-    const firstPageP = document.createElement("p");
-    firstPageP.classList.add("card");
-    firstPageP.textContent = `Try something delicious!`;
+    const firstPageH3 = document.createElement("h3");
+    firstPageH3.textContent = "Sub";
+    const firstPageP2 = document.createElement("p");
+    firstPageP2.classList.add("card");
+    firstPageP2.textContent = `When it comes to our menu, this is pretty much it! We do one thing, and we do it well. Enoy a sub so delicious that you'll want to give it a literal hug.`;
     const firstPageImage = document.createElement("img");
     firstPageImage.setAttribute("src", image2)
-    contentArea.append(firstPageH1, firstPageP, firstPageImage);
+    contentArea.append(firstPageH1, firstPageH3, firstPageP2, firstPageImage);
     
 }
 
